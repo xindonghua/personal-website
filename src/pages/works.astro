@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="作品" active="works">
+  <div class="section-title">
+    <h2>作品</h2>
+    <span class="more">整理中</span>
+  </div>
+
+  <p style="color: var(--ink-2); max-width: 620px; margin-bottom: 28px;">
+    这里会放我做过的一些项目、练习和折腾出来的小东西。目前还在整理，
+    之后每个作品会有独立的介绍页，包含截图、技术要点和链接。
+  </p>
+
+  <div class="works-grid">
+    <div class="work-card">
+      <div>
+        <span class="status">即将上线</span>
+        <h3>项目一</h3>
+        <p>一句话说明这个项目做了什么。</p>
+      </div>
+    </div>
+    <div class="work-card">
+      <div>
+        <span class="status">即将上线</span>
+        <h3>项目二</h3>
+        <p>一句话说明这个项目做了什么。</p>
+      </div>
+    </div>
+    <div class="work-card">
+      <div>
+        <span class="status">即将上线</span>
+        <h3>项目三</h3>
+        <p>一句话说明这个项目做了什么。</p>
+      </div>
+    </div>
+  </div>
+
+  <!--
+    添加作品的方式（两种任选）：
+    1. 直接改这个文件，把 work-card 换成你的项目内容；
+    2. 等作品变多后，再改成从 src/content 读取（和博客一样）。
+  -->
+</BaseLayout>
