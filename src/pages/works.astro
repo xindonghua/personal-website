@@ -3,43 +3,70 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="作品" active="works">
-  <div class="section-title">
-    <h2>作品</h2>
-    <span class="more">整理中</span>
-  </div>
+  <div class="wrap works">
+    <div class="fig-head">
+      <span class="fig-num">Fig. 02</span>
+      <h1 class="fig-title">作品</h1>
+      <span class="fig-note">1 件</span>
+    </div>
 
-  <p style="color: var(--ink-2); max-width: 620px; margin-bottom: 28px;">
-    这里会放我做过的一些项目、练习和折腾出来的小东西。目前还在整理，
-    之后每个作品会有独立的介绍页，包含截图、技术要点和链接。
-  </p>
+    <div class="fig-body" style="margin-bottom: 40px;">
+      <p>
+        做过的项目、练习和折腾出来的小东西。每个条目写清楚三件事：
+        它解决什么问题、我负责哪部分、最后的结果如何。
+      </p>
+    </div>
 
-  <div class="works-grid">
-    <div class="work-card">
-      <div>
-        <span class="status">即将上线</span>
-        <h3>项目一</h3>
-        <p>一句话说明这个项目做了什么。</p>
+    <article class="work">
+      <span class="work-num">01</span>
+      <div class="work-body">
+        <div class="work-text">
+          <h3>
+            <a href="/works/wedding-lottery.html" target="_blank" rel="noreferrer">婚礼幸运抽奖</a>
+          </h3>
+          <p>
+            婚礼现场用的抽奖互动页：12 张幸运卡片，点击翻开揭晓礼物，带进度统计和全部抽完的收尾状态。
+            单文件实现，不依赖任何外部资源，双击即可打开。
+          </p>
+          <p class="entry-meta">单文件 HTML · CSS 动画 · 原生 JS</p>
+          <p style="margin-top: 16px;">
+            <a class="link-more" href="/works/wedding-lottery.html" target="_blank" rel="noreferrer">
+              打开作品
+            </a>
+          </p>
+        </div>
+
+        <figure class="work-thumb">
+          <a href="/works/wedding-lottery.html" target="_blank" rel="noreferrer">
+            <img
+              src="/uploads/wedding-lottery-cover.jpg"
+              alt="婚礼幸运抽奖页面截图：囍印标题与 12 张金色卡片"
+              width="1120"
+              height="620"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <figcaption>界面截图 · 12 张卡片</figcaption>
+        </figure>
       </div>
-    </div>
-    <div class="work-card">
-      <div>
-        <span class="status">即将上线</span>
-        <h3>项目二</h3>
-        <p>一句话说明这个项目做了什么。</p>
-      </div>
-    </div>
-    <div class="work-card">
-      <div>
-        <span class="status">即将上线</span>
-        <h3>项目三</h3>
-        <p>一句话说明这个项目做了什么。</p>
-      </div>
-    </div>
+    </article>
+
+    <p style="margin-top: 40px; margin-bottom: 80px;">
+      <a class="link-more" href="/resume">打开简历</a>
+    </p>
   </div>
 
   <!--
-    添加作品的方式（两种任选）：
-    1. 直接改这个文件，把 work-card 换成你的项目内容；
-    2. 等作品变多后，再改成从 src/content 读取（和博客一样）。
+    添加作品：复制下面这段，替换编号、标题、描述与技术栈即可。
+
+    <article class="work">
+      <span class="work-num">02</span>
+      <div>
+        <h3><a href="/works/xxx.html" target="_blank" rel="noreferrer">项目名称</a></h3>
+        <p>一句话说明它做什么，以及我具体负责的部分。</p>
+        <p class="entry-meta">C++ · 算法</p>
+      </div>
+    </article>
   -->
 </BaseLayout>

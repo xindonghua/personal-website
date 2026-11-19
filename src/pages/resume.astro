@@ -3,100 +3,114 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="简历" active="resume">
-  <div class="resume">
-    <aside class="resume-aside">
-      <h1>董东华</h1>
-      <p class="role">计算机相关专业 · 求职方向待填写</p>
+  <div class="wrap">
+    <div class="resume">
+      <aside class="resume-side">
+        <h1 class="rname">辛东华</h1>
+        <p class="rrole">计算机相关专业 · 求职方向待填写</p>
 
-      <section class="resume-section">
-        <h2>联系方式</h2>
-        <ul class="contact-list">
-          <li>邮箱：xindongsh@163.com</li>
-          <li>GitHub：<span class="todo">待补充链接</span></li>
-          <li>电话：<span class="todo">待补充</span></li>
-          <li>所在地：<span class="todo">待补充</span></li>
-        </ul>
-      </section>
-
-      <section class="resume-section">
-        <h2>专业技能</h2>
-        <ul class="skill-list">
-          <li>C / C++：数据结构与算法、STL、常用算法设计</li>
-          <li>算法：动态规划、最短路、搜索、二分、RMQ 等</li>
-          <li>工具：Git、VS Code、Linux 基础命令</li>
-          <li>Web：HTML / CSS / JavaScript 基础 <span class="todo">按实际情况增删</span></li>
-          <li>英语：<span class="todo">四六级 / 分数</span></li>
-        </ul>
-      </section>
-
-      <section class="resume-section no-print">
-        <h2>快捷操作</h2>
-        <ul class="contact-list">
-          <li><a href="javascript:window.print()">打印 / 导出 PDF</a></li>
-          <li><a href="/">返回首页</a></li>
-        </ul>
-      </section>
-    </aside>
-
-    <div>
-      <section class="resume-section">
-        <h2>个人简介</h2>
-        <p style="color: var(--ink-2);">
-          热爱编程与算法，习惯用写代码的方式解决问题，也喜欢把学习过程和日常生活记录下来。
-          <span class="todo">用 2～3 句话补充你的介绍：性格特点、专注方向、想做的事。</span>
-        </p>
-      </section>
-
-      <section class="resume-section">
-        <h2>教育背景</h2>
-        <div class="timeline-item">
-          <h3><span class="todo">学校名称</span></h3>
-          <p class="when"><span class="todo">专业 · 学历</span> ｜ <span class="todo">2023.09 – 2027.06</span></p>
-          <ul>
-            <li>主修课程：<span class="todo">填写 3～5 门相关课程</span></li>
-            <li>GPA / 排名：<span class="todo">如 3.8 / 4.0，专业前 10%</span></li>
+        <section class="rblock">
+          <h2>联系方式</h2>
+          <ul class="contact-list">
+            <li><a href="mailto:xindongsh@163.com">xindongsh@163.com</a></li>
+            <li><a href="https://github.com/xindonghua" target="_blank" rel="noreferrer">github.com/xindonghua</a></li>
+            <li>电话：<span class="todo">待补充</span></li>
+            <li>所在地：<span class="todo">待补充</span></li>
           </ul>
-        </div>
-      </section>
+        </section>
 
-      <section class="resume-section">
-        <h2>项目与竞赛经历</h2>
-        <div class="timeline-item">
-          <h3><span class="todo">项目 / 竞赛名称</span></h3>
-          <p class="when"><span class="todo">担任角色</span> ｜ <span class="todo">时间</span></p>
-          <ul>
-            <li><span class="todo">项目背景与你要解决的问题</span></li>
-            <li><span class="todo">你的具体工作：用了什么技术、做了什么优化</span></li>
-            <li><span class="todo">结果：性能提升 xx%、获得 xx 奖项 / 名次</span></li>
+        <section class="rblock">
+          <h2>专业技能</h2>
+          <ul class="skill-list">
+            <li>C / C++：数据结构与算法、STL、常用算法设计</li>
+            <li>算法：动态规划、最短路、搜索、二分、RMQ 等</li>
+            <li>工具：Git、VS Code、Linux 基础命令</li>
+            <li>Web：HTML / CSS / JavaScript 基础</li>
+            <li>英语：<span class="todo">四六级 / 分数</span></li>
           </ul>
-        </div>
+        </section>
 
-        <div class="timeline-item">
-          <h3><span class="todo">第二个项目</span></h3>
-          <p class="when"><span class="todo">角色</span> ｜ <span class="todo">时间</span></p>
-          <ul>
-            <li><span class="todo">按「背景 → 做法 → 结果」三段式补充</span></li>
+        <section class="rblock no-print">
+          <h2>快捷操作</h2>
+          <ul class="contact-list">
+            <li><a href="javascript:window.print()">打印 / 导出 PDF</a></li>
+            <li><a href="/">返回首页</a></li>
           </ul>
-        </div>
-      </section>
+        </section>
+      </aside>
 
-      <section class="resume-section">
-        <h2>荣誉与证书</h2>
-        <div class="timeline-item">
-          <p class="when"><span class="todo">时间</span></p>
-          <ul>
-            <li><span class="todo">奖项 / 证书名称</span></li>
-            <li><span class="todo">继续添加</span></li>
-          </ul>
-        </div>
-      </section>
+      <div class="resume-main">
+        <section class="rblock">
+          <h2>个人简介</h2>
+          <p style="color: var(--muted);">
+            热爱编程与算法，习惯用写代码的方式解决问题，也喜欢把学习过程和日常生活记录下来。
+            <span class="todo">用 2～3 句话补充：性格特点、专注方向、想做的事。</span>
+          </p>
+        </section>
 
-      <section class="resume-section">
-        <h2>自我评价</h2>
-        <p style="color: var(--ink-2);">
-          <span class="todo">写 2～3 条，每条一句话，避免空话套话，最好能对应上面的经历。</span>
-        </p>
-      </section>
+        <section class="rblock">
+          <h2>教育背景</h2>
+          <div class="rrow">
+            <div class="rwhen"><span class="todo">2023.09 – 2027.06</span></div>
+            <div class="rbody">
+              <h3><span class="todo">学校名称</span></h3>
+              <p><span class="todo">专业 · 学历</span></p>
+              <ul>
+                <li>主修课程：<span class="todo">填写 3～5 门相关课程</span></li>
+                <li>GPA / 排名：<span class="todo">如 3.8 / 4.0，专业前 10%</span></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="rblock">
+          <h2>项目与竞赛经历</h2>
+
+          <div class="rrow">
+            <div class="rwhen"><span class="todo">时间</span></div>
+            <div class="rbody">
+              <h3><span class="todo">项目 / 竞赛名称</span></h3>
+              <p><span class="todo">担任角色</span></p>
+              <ul>
+                <li><span class="todo">项目背景与你要解决的问题</span></li>
+                <li><span class="todo">你的具体工作：用了什么技术、做了什么优化</span></li>
+                <li><span class="todo">结果：性能提升 xx%、获得 xx 奖项 / 名次</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="rrow">
+            <div class="rwhen"><span class="todo">时间</span></div>
+            <div class="rbody">
+              <h3><span class="todo">第二个项目</span></h3>
+              <p><span class="todo">角色</span></p>
+              <ul>
+                <li><span class="todo">按「背景 → 做法 → 结果」三段式补充</span></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="rblock">
+          <h2>荣誉与证书</h2>
+          <div class="rrow">
+            <div class="rwhen"><span class="todo">时间</span></div>
+            <div class="rbody">
+              <ul>
+                <li><span class="todo">奖项 / 证书名称</span></li>
+                <li><span class="todo">继续添加</span></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="rblock">
+          <h2>自我评价</h2>
+          <p style="color: var(--muted);">
+            <span class="todo">写 2～3 条，每条一句话，避免空话套话，最好能对应上面的经历。</span>
+          </p>
+        </section>
+      </div>
     </div>
   </div>
 </BaseLayout>

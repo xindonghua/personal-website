@@ -15,35 +15,42 @@ const fmt = (d: Date) =>
   description="生活记录：日常、学习与随手拍下的片段。"
   active="blog"
 >
-  <div class="section-title">
-    <h2>生活记录</h2>
-    <span class="more">共 {posts.length} 篇</span>
-  </div>
+  <div class="wrap">
+    <div class="fig-head" style="padding-top: 56px;">
+      <span class="fig-num">Fig. 03</span>
+      <h1 class="fig-title">生活记录</h1>
+      <span class="fig-note">共 {posts.length} 篇</span>
+    </div>
 
-  {
-    posts.length === 0 ? (
-      <div class="empty">还没有文章。在 src/content/posts 新建一个 .md 文件即可开始。</div>
-    ) : (
-      <ul class="post-list">
-        {posts.map((post) => (
-          <li>
-            <a href={`/blog/${post.id}`}>
-              <span class="post-date">{fmt(post.data.pubDate)}</span>
-              <span>
-                <span class="post-title">{post.data.title}</span>
-                {post.data.description && <p class="post-desc">{post.data.description}</p>}
-                {post.data.tags.length > 0 && (
-                  <span class="tags">
-                    {post.data.tags.map((tag) => (
-                      <span class="tag">{tag}</span>
-                    ))}
-                  </span>
-                )}
-              </span>
-            </a>
-          </li>
-        ))}
-      </ul>
-    )
-  }
+    {
+      posts.length === 0 ? (
+        <div class="empty">还没有记录。在 src/content/posts 新建一个 .md 文件即可开始。</div>
+      ) : (
+        <ul class="post-list">
+          {posts.map((post) => (
+            <li>
+              <a href={`/blog/${post.id}`}>
+                <span class="post-date">{fmt(post.data.pubDate)}</span>
+                <span>
+                  <span class="post-title">{post.data.title}</span>
+                  {post.data.description && <p class="post-desc">{post.data.description}</p>}
+                  {post.data.tags.length > 0 && (
+                    <span class="tags">
+                      {post.data.tags.map((tag) => (
+                        <span class="tag">{tag}</span>
+                      ))}
+                    </span>
+                  )}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+
+    <p style="margin-top: 40px; margin-bottom: 80px;">
+      <a class="link-more" href="/">返回首页</a>
+    </p>
+  </div>
 </BaseLayout>
